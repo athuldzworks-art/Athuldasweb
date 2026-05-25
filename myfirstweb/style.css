@@ -1,0 +1,421 @@
+ body {
+        margin: 0px;
+      }
+      /* Header Section */
+      header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 50px;
+       }
+      #links-box ul{
+       display:flex;
+       list-style-type: none;
+       gap:30px;
+       }
+      #links-box ul li a{
+        color: black;
+        text-decoration: none;
+       }
+      #links-box ul li a:hover{
+        color: red;
+        text-decoration: underline;
+      }
+      img#logo-image{
+        height: 100px;
+      }
+      
+/* hero section */
+      #hero { 
+  background-color: rgb(255, 60, 0);
+  color: white;
+  padding: 80px 50px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* RED BULL heading */
+#hero h1 {
+  font-size: 60px;
+  letter-spacing: 2px;
+
+  opacity: 0;
+  transform: translateY(-50px) scale(0.9);
+  animation: heroTitle 0.8s ease forwards;
+}
+
+/* tagline */
+#hero p {
+  font-size: 20px;
+  margin-top: 10px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroText 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* button (optional animation) */
+.btn-hero {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: rgb(255, 60, 0);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* animations */
+@keyframes heroTitle {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+      /* about section */
+      #about-box {
+        display: flex;
+        padding: 0px 50px;
+        gap: 30px;
+      }
+      #about-text-box {
+        width: 50%;
+      }
+      #about-image-box {
+        width: 50%;
+      }
+      #about-image {
+        width: 100%;
+      }
+      /* about section */
+#about-box {
+  display: flex;
+  padding: 40px 50px;
+  gap: 30px;
+  align-items: center;
+}
+
+/* text animation (slide from left) */
+#about-text-box {
+  width: 50%;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideLeft 0.8s ease forwards;
+}
+
+/* image animation (slide from right) */
+#about-image-box {
+  width: 50%;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideRight 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* image styling + hover */
+#about-image {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+#about-image:hover {
+  transform: scale(1.05);
+}
+
+/* text styling */
+#about-text-box p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* animations */
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.sec-title {
+  text-align: center;
+  margin-bottom: 30px;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: titleFade 0.8s ease forwards;
+}
+@media (max-width: 768px) {
+  #about-box {
+    flex-direction: column;
+  }
+
+  #about-text-box,
+  #about-image-box {
+    width: 100%;
+  }
+}
+      /* service section */
+      #services-box {
+        display:flex;
+        padding:0px 50px;
+        gap:30px;
+      }
+      .service-box{
+        width:33.33%;
+      }
+      img.service-image{
+        width:100%;
+      }
+      .service-box {
+        width: 33.33%;
+        background: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+            /* Hover effect on heading */
+.sec-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: titleFade 0.8s ease forwards;
+}
+
+@keyframes titleFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect */
+      .service-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(255, 69, 69, 0.43);
+      }
+
+/* Hover effect on load page */
+      .service-box {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeUp 0.6s ease forwards;
+      }
+
+.service-box:nth-child(1) { animation-delay: 0.1s; }
+.service-box:nth-child(2) { animation-delay: 0.2s; }
+.service-box:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-box {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-box {
+    width: 100%;
+  }
+}
+      .sec-title {
+  text-align: center;
+  margin-bottom: 25px;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: titleFade 0.8s ease forwards;
+}
+
+@keyframes titleFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* product section */
+      #products-box {
+        display:flex;
+        padding:0px 50px;
+        gap:30px;
+      }
+      .product-box {
+        width:25%;
+      }
+      img.product-image{
+        width:100%;
+      }
+      .product-box {
+        width: 25%;
+        background: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      /* Hover effect on heading */
+.sec-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: titleFade 0.8s ease forwards;
+}
+
+@keyframes titleFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect */
+      .product-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(255, 69, 69, 0.43);
+      }
+
+/* Hover effect on load page */
+      .product-box {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeUp 0.6s ease forwards;
+      }
+
+.product-box:nth-child(1) { animation-delay: 0.1s; }
+.product-box:nth-child(2) { animation-delay: 0.2s; }
+.product-box:nth-child(3) { animation-delay: 0.3s; }
+.product-box:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-box {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-box {
+    width: 100%;
+  }
+}
+/* Responsive Section */
+@media (max-width: 768px) {
+    header{
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items:center;
+        padding: 0px 15px;
+    }
+
+    .links-box ul{
+        margin-bottom: 20px;
+    }
+}
+
+#hero {
+    background-image: url(hero-bg.webp);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+/* Target the "RED BULL" text */
+#hero h1 {
+    font-size: 5rem; /* Adjust this value to get the size you want */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        padding: 50px 15px;
+    }
+
+    #hero h1 {
+        font-size: 3rem; /* Smaller size for mobile devices */
+    }
+}
+@media (max-width: 768px) {
+    #about-box{
+        padding: 0px 15px;
+        flex-wrap: wrap;
+    }
+
+    #about-text-box,
+    #about-image-box{
+        width: 100%;
+    }
+
+    #about-text-box{
+        text-align: justify;
+    }
+}
+@media (max-width: 768px) {
+    #services-box{
+        padding: 0px 15px;
+        flex-wrap: wrap;
+    }
+
+    .service-box{
+        width: 100%;
+    }
+}
+.btn-hero {
+    background-color: #f30b0b; /* Red Bull Red */
+    color: #ffffff;
+    font-size: 1.0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    border: 2px solid #ffffff; /* White border to stand out against background */
+    border-radius: 30px;       /* Rounded pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover */
+    margin-top: 20px;
+    transform: scale(0.8);
+}
+
+/* Hover Effect */
+.btn-hero:hover {
+    background-color: #ffffff;
+    color: #ff0000; /* Dark Navy Blue */
+    transform: scale(1.05); /* Slightly grows when hovered */
+}
